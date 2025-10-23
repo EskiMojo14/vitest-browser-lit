@@ -4,7 +4,7 @@ Render Lit components in Vitest Browser Mode. This library follows `testing-libr
 
 `vitest-browser-lit` aims to deliver a good developer experience in Vitest Browser Mode by incorporating the [locators API](https://vitest.dev/guide/browser/locators.html) and [retry-ability](https://vitest.dev/guide/browser/assertion-api.html) mechanism directly into the `render` result. This allows you to call user methods without needing to verify the element's existence or wait for external events (like API calls) to render the element.
 
-Requires `vitest` and `@vitest/browser` 2.1.0 or higher.
+Requires `vitest` 4 or higher.
 
 ```tsx
 import { render } from 'vitest-browser-lit'
@@ -25,13 +25,14 @@ test('counter button increments the count', async () => {
 ```ts
 // vitest.config.ts
 import { defineConfig } from 'vitest/config'
+import { playwright } from '@vitest/browser-playwright'
 
 export default defineConfig({
   test: {
     setupFiles: ['./setup-file.ts'],
     browser: {
       enabled: true,
-      provider: 'playwright',
+      provider: playwright(),
       instances: [{ browser: 'chromium' }],
     },
   },
@@ -43,7 +44,7 @@ import 'vitest-browser-lit'
 ```
 
 ```tsx
-import { page } from '@vitest/browser/context'
+import { page } from 'vitest/browser'
 import { test } from 'vitest'
 import { html } from 'lit'
 
