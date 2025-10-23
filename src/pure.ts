@@ -1,7 +1,9 @@
-import type { LocatorSelectors } from '@vitest/browser/context'
-import { debug, getElementLocatorSelectors } from '@vitest/browser/utils'
+import type { LocatorSelectors } from 'vitest/browser'
+import { utils } from 'vitest/browser'
 import type { RenderOptions } from 'lit'
 import { render as litRender } from 'lit'
+
+const { debug, getElementLocatorSelectors } = utils
 
 export interface ComponentRenderOptions extends RenderOptions {
   baseElement?: HTMLElement
@@ -11,7 +13,7 @@ export interface ComponentRenderOptions extends RenderOptions {
 export interface RenderResult extends LocatorSelectors {
   container: HTMLElement
   baseElement: HTMLElement
-  debug: typeof debug
+  debug: typeof utils.debug
   unmount: () => void
   rerender: (template: unknown) => void
   asFragment: () => DocumentFragment

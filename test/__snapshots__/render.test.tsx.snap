@@ -3,6 +3,11 @@
 exports[`renders simple component 1`] = `
 <div>
   <!---->
-  <hello-world />
+  <hello-world>
+    #shadow-root
+      <div>
+        Hello World
+      </div>
+  </hello-world>
 </div>
 `;
