@@ -51,13 +51,12 @@
     "lint:fix": "pnpm lint --fix"
   },
   "peerDependencies": {
-    "@vitest/browser": ">=2.1.0",
     "lit": ">3.0.0",
-    "vitest": ">=2.1.0"
+    "vitest": ">=4.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
-    "@vitest/browser": "^3.0.9",
+    "@vitest/browser-playwright": "^4.0.2",
     "bumpp": "^10.1.0",
     "changelogithub": "^13.13.0",
     "eslint": "^9.8.0",
@@ -66,7 +65,7 @@
     "tsdown": "^0.6.10",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4",
-    "vitest": "^3.0.9",
+    "vitest": "^4.0.0",
     "zx": "^8.1.4"
   }
 }

@@ -1,6 +1,6 @@
 import { html } from 'lit'
 import { expect, test } from 'vitest'
-import { page } from '@vitest/browser/context'
+import { page } from 'vitest/browser'
 import { render } from '../src/index'
 import './fixtures/hello-world'
 import './fixtures/counter'
